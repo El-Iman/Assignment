@@ -1,0 +1,63 @@
+<div class="employee-list">
+
+  <div class="container">
+
+    <div class="head">
+      <p>Employee</p>
+      <p> + Add User </p>
+    <div class="clearFix"></div>
+
+    </div>
+
+    <div class="list">
+
+      <form #f="ngForm">
+
+        <div class="form-group form-inline">
+          <div class="input-group rounded">
+            <input type="text" class="form-control rounded" placeholder="Search" aria-label="Search"
+              aria-describedby="search-addon"  name="first" ngModel [(ngModel)]="filter" required #first="ngModel" />
+              <span class="input-group-text border-0" id="search-addon">
+                <i class="fas fa-search"></i>
+              </span>
+              <span class="input-group-text border-0" id="close" (click)="clearSearch()">
+                <i class="fas fa-times"></i>
+              </span>
+          </div>
+
+        </div>
+
+      </form>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let country of EMPLOYEE | search:filter; index as i">
+            <td scope="row">{{country.name}}</td>
+            <td>{{country.email}}</td>
+            <td>{{country.role}}</td>
+            <td>
+                <a href=""> <img src="../../../assets/images/email.png" > </a>
+                <a href=""> <img src="../../../assets/images/pencil.png" > </a>
+                <a href=""> <img src="../../../assets/images/trash.png" > </a>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+

@@ -1,0 +1,86 @@
+
+.employee-list{
+  padding: 50px 0px;
+
+}
+
+.container{
+  border: 4px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.head p:first-child{
+  float: left;
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+}
+
+.head p:nth-child(2){
+  float: right;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.head{
+  margin-bottom: 65px;
+}
+.list{
+  margin-top: 50px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 15px;
+  overflow-x:auto ;
+}
+
+.list form{
+  float: right;
+}
+.list form input{
+  border: 0;
+  border-bottom: 1px solid #ced4da;
+}
+.rounded{
+  border-radius: 0 !important;
+  padding: 0px 30px;
+}
+#search-addon, #close{
+  position: absolute;
+  top: 7px;
+}
+#search-addon{
+  left: 25px;
+}
+#close{
+  right: 0;
+  cursor: pointer;
+}
+.list form .input-group-text{
+  background-color: transparent;
+}
+.list .table td, .table th{
+  border-top: 0;
+}
+.list td img{
+  width: 15px;
+  height: 15px;
+  margin: 0px 10px;
+  display: inline-block;
+}
+
+.form-control:focus {
+  border-color: transparent;
+  box-shadow: none
+}
+
+
+
+
+div.hidden{
+  display: none;
+}
+
+.btn{
+  margin:100px auto;
+}

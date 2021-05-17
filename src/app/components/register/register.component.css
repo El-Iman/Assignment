@@ -1,0 +1,112 @@
+*{
+  box-sizing: border-box;
+}
+
+.register-section{
+  padding: 100px 0px;
+}
+
+.col-md-7{
+  margin-bottom: 30px;
+}
+
+.register-section .img{
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  padding:0px 30px;
+}
+.register-section .img img{
+  height: 100%;
+  width: 100%;
+}
+
+.register-section .overlay{
+  position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image:linear-gradient(#aa13aab3,#8a1c8a9a,#b625b6bd,#ff1493c4 );
+margin:0px  30px;
+}
+h2{
+  font-weight: bold;
+  color: black;
+  margin-bottom:30px;
+
+}
+.header-sm{
+display: none;
+}
+.form-group{
+  margin-bottom: 18px;
+}
+
+.form p{
+  margin-bottom: 0px;
+}
+.form p span{
+  color: red;
+  font-size: 20px;
+}
+
+.form .form-group input{
+  border: 0;
+  margin-top: 0px;
+  border-radius: 0;
+  border-bottom: 1px solid #ced4da;
+}
+.form-control{
+  font-size: 13px;
+}
+.form-control:focus {
+  border-color: transparent;
+  box-shadow: none
+}
+.form .form-group label{
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.form-group button{
+  border-radius: 30px;
+  color: white;
+  padding: 15px 0px;
+  width: 50%;
+  border: 1px solid rgb(255, 0, 221) ;
+  background-image: linear-gradient(purple,deeppink );
+}
+.sign-up{
+  position: relative;
+}
+.form-group a{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.fa-arrow-right{
+  vertical-align: middle;
+  font-weight: 600;
+}
+@media (max-width:767px) {
+ h2{
+   text-align: center;
+   margin-bottom: 50px;
+ }
+ .register-section .img{
+   position: static;
+ }
+.register-section .overlay{
+   margin: 0px 45px;
+ }
+
+ .header-lg{
+   display: none;
+ }
+ .header-sm{
+   display: block;
+ }
+}

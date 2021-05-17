@@ -1,0 +1,91 @@
+<section class="register-section">
+
+  <div class="container">
+    <h2 class="header-sm">Sign Up</h2>
+
+    <div class="row">
+
+      <div class="col-md-7 col-sm-12 ">
+        <div class="img">
+          <img src="assets/images/images (1).jpg" alt="">
+        </div>
+        <div class="overlay"></div>
+      </div>
+
+      <div class="col-md-5 col-sm-12">
+        <div class="form">
+          <h2 class="header-lg">Sign Up</h2>
+
+          <form #form="ngForm" method="GET">
+
+            <div class="form-group">
+              <p>Full Name <span>*</span></p>
+              <input type="text" id="nameFeild" name="fullName" #fullName="ngModel" ngModel required
+                placeholder="Name.." class="form-control">
+              <div class=" alert alert-danger" *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)">Name is
+                required.</div>
+            </div>
+
+            <div class="form-group">
+              <p> Email </p>
+              <input type="email" email id="emailFeild" #email="ngModel" name="email" ngModel
+                placeholder="Email address.." class="form-control">
+              <div class=" alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched) ">Please enter a valid email address.</div>
+            </div>
+
+            <div class="form-group">
+              <p> Username </p>
+              <input type="text" id="usernameFeild" ngModel name="username" required #username="ngModel"
+                placeholder="Username.." class="form-control">
+              <div class=" alert alert-danger" *ngIf="username.invalid && (username.touched) ">Username is required.</div>
+            </div>
+
+            <div class="form-group">
+              <p> Password </p>
+              <input type="password" name="password" placeholder="Password"
+                class="form-control" required ngModel  #password="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+
+              <div *ngIf="password.invalid && (password.touched)" class="alert alert-danger">
+                <div *ngIf="password.errors.required"> Password is required. </div>
+                <div *ngIf="password.errors.pattern"> Must contain at least one number and one uppercase and lowercase
+                  letter, and at least 8 or more characters.</div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <p> Repeat Password </p>
+              <input type="password" name="confirmpassword"
+                placeholder="Confirm Password" class="form-control" ngModel required #confirmpassword="ngModel"
+                pattern="{{ password.value }}" />
+
+              <div *ngIf=" confirmpassword.invalid && ( confirmpassword.touched)" class="alert alert-danger">
+                <div *ngIf="confirmpassword.errors.required"> Confirm password is required. </div>
+                <div *ngIf="confirmpassword.errors.pattern"> Password & Confirm Password does not match.</div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <input type="checkbox" id="checkbox" name="active" #active="ngModel" ngModel required >
+              <label for="checkbox">I agree to the term</label>
+
+              <div *ngIf="active.errors.required && ( active.touched)" class="alert alert-danger"> Please indicate that you accept the Terms and Conditions. </div>
+            </div>
+
+
+            <div class="form-group sign-up">
+              <button type="submit"  [disabled]="form.invalid" class="">Sign Up</button>
+              <a> Sign In <span class="fa fa-arrow-right"></span></a>
+            </div>
+
+          </form>
+
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
